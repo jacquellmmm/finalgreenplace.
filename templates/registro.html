@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - GreenPlace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        :root {
+            --verde-claro: #d9f99d;
+            --verde-oscuro: #556b2f;
+            --rojo: #ff4757;
+        }
+
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            /* Misma imagen de fondo que login para consistencia */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                              url("https://content.nationalgeographic.com.es/medio/2024/06/21/brote_c0cfb6b0_240621140849_1280x853.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            overflow: hidden;
+        }
+
+
+        .form-container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+
+        h2 {
+            color: var(--verde-claro);
+            margin-bottom: 25px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+
+        .input-group i {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            color: var(--verde-claro);
+            font-size: 18px;
+        }
+
+
+        input {
+            width: 100%;
+            padding: 16px 16px 16px 50px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-sizing: border-box;
+            font-family: inherit;
+            color: white;
+            outline: none;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+
+        input:focus {
+            border-color: var(--verde-claro);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(217, 249, 157, 0.2);
+        }
+
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: var(--verde-claro);
+            color: #1a1a1a;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+
+        button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px var(--verde-claro);
+            filter: brightness(1.1);
+        }
+
+
+        .mensaje-error {
+            background: rgba(255, 82, 82, 0.2);
+            color: #ff8a8a;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            border: 1px solid var(--rojo);
+            font-weight: bold;
+        }
+
+
+        a {
+            display: block;
+            margin-top: 15px;
+            color: var(--verde-claro);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+
+        a:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 10px var(--verde-claro);
+        }
+
+
+        .top-links {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="form-container">
+        <h2><i class="fas fa-user-plus"></i> REGISTRO</h2>
+
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="mensaje-error">
+                <i class="fas fa-exclamation-triangle"></i> {{ messages[0] }}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+
+        <form action="{{ url_for('register') }}" method="POST">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="username" placeholder="Elige un usuario" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Crea una contraseña" required>
+            </div>
+            <button type="submit">UNIRSE A GREENPLACE</button>
+        </form>
+
+
+        <div class="top-links">
+            <a href="{{ url_for('login') }}">¿Ya tienes cuenta? Inicia sesión</a>
+            <a href="{{ url_for('inicio') }}"><i class="fas fa-home"></i> Volver al inicio</a>
+        </div>
+    </div>
+
+
+</body>
+</html>

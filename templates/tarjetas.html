@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuadros </title>
+
+    <style>
+
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://content.nationalgeographic.com.es/medio/2024/06/21/brote_c0cfb6b0_240621140849_1280x853.jpg')
+        no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+/* MENÚ SUPERIOR EN RECUADROS */
+        .top-menu {
+            
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+          
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            background: transparent;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #ffffff;
+            box-shadow: none;
+            transition: none;
+        }
+
+        .top-menu a:hover {
+            background: transparent;
+            transform: none;
+        }
+
+/* CONTENIDO PRINCIPAL */
+        .content {
+            padding: 20px;
+        }
+
+/* GRID DE TARJETAS */
+        .grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: 0.2s;
+            text-decoration: none;
+            color: rgb(253, 253, 253);
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 10px;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+<div class="fondo"></div>
+
+<!-- MENÚ SUPERIOR -->
+    <div class="top-menu">
+        <a href="reciclaje.html">Inicio</a>
+        <a href="#">Tendencias</a>
+        <a href="#">Historial</a>
+        <a href="#">Biblioteca</a>
+    </div>
+
+<!-- CONTENIDO -->
+    <div class="content">
+        <h1>Hagamos conciencia</h1>
+
+        <div class="grid">
+
+            <a href="reciclaje.html" class="card">
+                <img src="https://s3.amazonaws.com/gobcl-prod/public_files/Campa%C3%B1as/Corona-Virus/Reportes/Nuevos-reportes/tips-reciclar-pasos-botellas.jpg">
+                <div class="info">
+                    <div class="title">Reciclaje</div>
+                    <div class="subtitle">Qué es y cómo empezar</div>
+                </div>
+            </a>
+
+            <a href="pag2.html" class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2fivbKdI3o1H5YqPPH7muUYiMvUxv550mZw&s">
+                <div class="info">
+                    <div class="title">Flora</div>
+                    <div class="subtitle">Como afecta al medio ambiente</div>
+                </div>
+            </a>
+
+            <a href="pag2.html" class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaEj6uoSGoDvFFL_YNrKolHKge6bKxgas3cw&s">
+                <div class="info">
+                    <div class="title">Fauna</div>
+                    <div class="subtitle">como afecta a otras especies</div>
+                </div>
+            </a>
+
+            <a href="pag2.html" class="card">
+                <img src="https://i.ytimg.com/vi/2XAFD0Jw1M4/maxresdefault.jpg">
+                <div class="info">
+                    <div class="title">Video de reciclaje</div>
+                    <div class="subtitle">Aprende viendo</div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

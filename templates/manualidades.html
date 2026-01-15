@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manualidades</title>
+
+
+    <style>
+        .fondo {
+            position: fixed;
+            inset: 0;
+            background: url('https://www.cleanipedia.com/images/iohqr4whhl17/6GM3HTDXpcsRHdTp1qTds3/8dd347a039e38acb120a5fd64023ae34/T3JnYW5pemFkb3IuanBn/600w/envases-decorativos-reciclados-conteniendo-%C3%BAtiles-escolares-sobre-una-mesa-de-madera..webp')
+            center / cover no-repeat;
+            filter: blur(5px);
+            z-index: -1;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: white;
+        }
+
+
+        .content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+
+        /* AJUSTE DE REJILLA: Más espacio entre elementos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px; /* Mayor separación */
+        }
+
+
+        .card {
+            background: rgba(24, 24, 24, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .info {
+            padding: 20px;
+        }
+
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4db8ff; /* Color para resaltar */
+            margin-bottom: 5px;
+        }
+
+
+        .subtitle {
+            font-size: 14px;
+            color: #aaaaaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+
+        /* NUEVA DESCRIPCIÓN */
+        .description {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #dddddd;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 10px;
+        }
+
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .volver {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+
+        .volver a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background: rgba(0,0,0,0.3);
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+
+        .volver a:hover {
+            background: white;
+            color: black;
+        }
+
+
+        .top-menu a {
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+       
+        .top-menu a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="fondo"></div>
+
+
+
+
+<div class="content">
+    <h1>Manualidades con Material Reciclado</h1>
+
+
+    <div class="grid">
+
+
+        <div class="card">
+            <a href="https://youtu.be/D_u6mNlHprE?si=3o1IMEwUZRmlgK-2" target="_blank">
+                <img src="data:image/webp;base64,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">
+                <div class="info">
+                    <div class="title">Macetas de tortuga</div>
+                    <div class="subtitle">Material: Plastico</div>
+                    <div class="description">
+                        Aprende a hacer una maceta de tortuga con plastico y materiales faciles de conseguir
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="card">
+            <a href="https://youtu.be/CLyDKwr43QY?si=qEj3QS0jCVyPGkcE" target="_blank">
+                <img src="https://i.ytimg.com/vi/CLyDKwr43QY/maxresdefault.jpg">
+                <div class="info">
+                    <div class="title">Figuras de rollos de papel</div>
+                    <div class="subtitle">Material: Cartón</div>
+                    <div class="description">
+                        No tires los rollos de papel, aprende a hacer divertidas figuras con ellas
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="card">
+            <a href="https://youtu.be/XmDHdmWS0IY?si=rktux3fu9BVr9xMZ" target="_blank">
+                <img src="https://i.ytimg.com/vi/XmDHdmWS0IY/maxresdefault.jpg">
+                <div class="info">
+                    <div class="title">Macetas con Botellas</div>
+                    <div class="subtitle">Material: Plástico</div>
+                    <div class="description">
+                        Transforma botellas de refresco en divertidas macetas auto-regables con formas de personajes para tus plantas de interior.
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="card">
+            <a href="https://youtu.be/4_XPDD6ojRY?si=pg3RVCQkSLzyeYpJ" target="_blank">
+                <img src="https://i.ytimg.com/vi/4_XPDD6ojRY/maxresdefault.jpg">
+                <div class="info">
+                    <div class="title">Manualidades de reciclaje faciles</div>
+                    <div class="subtitle">Material: Plástico y carton</div>
+                    <div class="description">
+                        Descubre cómo hacer diversas manualidades de una manera divertida y facil
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="card">
+            <a href="https://youtu.be/asCsw_YnTJo?si=NP1iba3-Dw2duteX" target="_blank">
+                <img src="https://i.ytimg.com/vi/asCsw_YnTJo/maxresdefault.jpg">
+                <div class="info">
+                    <div class="title">Manualidades para ninos</div>
+                    <div class="subtitle">Material: Papel y carton</div>
+                    <div class="description">
+                        Ensena a los ninos a reciclar para que se diviertan mientras cuidan el medio ambiente
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="card">
+            <a href="https://youtu.be/k3WrcvXGT7A?si=WhpEiIiJ0H0cXX7z" target="_blank">
+                <img src="https://i.ytimg.com/vi/k3WrcvXGT7A/maxresdefault.jpg">
+                <div class="info">
+                    <div class="title">Disenos con botellas </div>
+                    <div class="subtitle">Material: PLastico</div>
+                    <div class="description">
+                        Utiliza botellas para hacer distintas e increibles manualidades
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="volver">
+    <a href="{{ url_for('inicio') }}">Volver al Inicio</a>
+</div>
+
+
+</body>
+</html>

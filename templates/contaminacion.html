@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contaminación - GreenPlace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <style>
+        :root {
+            --verde-oscuro: #556b2f;
+            --verde-claro: #d9f99d;
+            --blanco-cristal: rgba(255, 255, 255, 0.1);
+        }
+
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #1a1a1a;
+            margin: 0;
+            color: white;
+            /* Fondo consistente con el inicio y reciclaje */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                              url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop");
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+
+        /* NAVEGACIÓN (Estilo flotante del inicio) */
+        .top-menu {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(85, 107, 47, 0.9);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--verde-claro);
+        }
+
+
+        .top-menu a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+
+        .top-menu a:hover {
+            color: var(--verde-claro);
+            text-shadow: 0 0 10px var(--verde-claro);
+        }
+
+
+        /* CONTENEDOR PRINCIPAL (Glassmorphism) */
+        .contenedor {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+
+        .encabezado-imagen {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 2px solid var(--verde-claro);
+        }
+
+
+        h2 {
+            color: var(--verde-claro);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+
+        .subtitulo {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+
+        /* SECCIONES INFORMATIVAS */
+        .seccion-info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 25px;
+            border-left: 5px solid var(--verde-claro);
+            transition: transform 0.3s ease;
+        }
+
+
+        .seccion-info:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+
+        .seccion-info.invertida {
+            flex-direction: row-reverse;
+        }
+
+
+        .texto-info {
+            flex: 1;
+        }
+
+
+        .texto-info h3 {
+            color: var(--verde-claro);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+
+        .texto-info p, .texto-info ul {
+            line-height: 1.7;
+            color: #ddd;
+        }
+
+
+        .imagen-info {
+            flex: 1;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+
+        /* BLOQUE FINAL */
+        .bloque-final {
+            background: rgba(217, 249, 157, 0.15); /* Tinte verde claro */
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            border: 1px solid var(--verde-claro);
+            margin-top: 50px;
+        }
+
+
+        .bloque-final h3 {
+            color: var(--verde-claro);
+            margin-top: 0;
+        }
+
+
+        /* BOTÓN REGRESAR */
+        .centro { text-align: center; margin-top: 40px; }
+
+
+        .btn-regresar {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--verde-claro);
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(217, 249, 157, 0.2);
+        }
+
+
+        .btn-regresar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--verde-claro);
+        }
+
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .seccion-info, .seccion-info.invertida {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contenedor { margin: 20px; padding: 20px; }
+            .encabezado-imagen { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+<div class="contenedor">
+    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80" alt="Naturaleza" class="encabezado-imagen">
+
+
+    <h2>¿Qué es la contaminación?</h2>
+    <p class="subtitulo">Descubre cómo nuestras acciones afectan el equilibrio del planeta y cómo protegerlo.</p>
+
+
+    <div class="seccion-info">
+        <div class="texto-info">
+            <h3> Tipos de contaminación</h3>
+            <p>Existen diversas formas en que dañamos nuestro entorno:</p>
+            <ul>
+                <li><strong>Aire:</strong> Emisiones de gases industriales y transporte.</li>
+                <li><strong>Agua:</strong> Plásticos y químicos en mares y ríos.</li>
+                <li><strong>Suelo:</strong> Acumulación de basura y uso de pesticidas.</li>
+            </ul>
+        </div>
+        <img src="https://th.bing.com/th/id/OIP.yJHMB29HpMuongeVxlJGswHaE8?w=241&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Contaminación de ciudad" class="imagen-info">
+    </div>
+
+
+    <div class="seccion-info invertida">
+        <div class="texto-info">
+            <h3>Un problema global</h3>
+            <p>
+                La contaminación ambiental es uno de los desafíos más urgentes que enfrenta la humanidad en la actualidad. Cada año, la acumulación de contaminantes en el aire, agua y suelo afecta gravemente la salud de los ecosistemas y de las poblaciones humanas. Comprender cuánto aumenta la contaminación de manera anual resulta fundamental para diseñar estrategias efectivas que puedan mitigar sus impactos y promover un desarrollo sostenible.
+En las últimas décadas, el crecimiento industrial, el aumento del transporte motorizado y la expansión urbana han contribuido a un incremento constante de los niveles de contaminación. Sin embargo, la magnitud exacta del aumento anual varía según la región, el tipo de contaminante y las políticas ambientales implementadas. Este artículo se enfocará en analizar datos recientes que reflejan estas tendencias, con el objetivo de ofrecer una perspectiva clara y actualizada sobre el ritmo al que se intensifica la contaminación a nivel global y local.
+            </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=500&q=80" alt="Hielo derritiéndose" class="imagen-info">
+    </div>
+
+
+    <div class="bloque-final">
+        <h3> Únete al Cambio</h3>
+        <p>
+            El cambio real comienza con tus hábitos diarios. Reducir tu huella de carbono, evitar plásticos de un solo uso y fomentar la educación ambiental son los pilares para un futuro sostenible.
+        </p>
+    </div>
+
+
+    <div class="centro">
+        <a href="{{ url_for('inicio') }}" class="btn-regresar"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+    </div>
+</div>
+
+
+</body>
+</html>

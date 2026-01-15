@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclaje y Reutilización - GreenPlace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        :root {
+            --verde-oscuro: #556b2f;
+            --verde-claro: #d9f99d;
+            --blanco-cristal: rgba(255, 255, 255, 0.1);
+        }
+
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            color: white;
+            /* Fondo consistente con el inicio */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                              url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+
+        .banner {
+            width: 100%;
+            height: 250px;
+            background: url("https://mancomunidadsierramorena.es/wp-content/uploads/2023/08/hands-g8b0d3db49_1280.jpg") center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid var(--verde-claro);
+        }
+
+
+        h1 {
+            background: rgba(85, 107, 47, 0.85);
+            backdrop-filter: blur(10px);
+            color: var(--verde-claro);
+            text-align: center;
+            padding: 20px 40px;
+            margin: 0;
+            font-size: 35px;
+            border-radius: 50px;
+            border: 1px solid var(--verde-claro);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+
+        .contenido {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+
+        .bloque {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            border-left: 5px solid var(--verde-claro);
+        }
+
+
+        .bloque:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+
+        .bloque img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 15px;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+
+        .texto-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--verde-claro);
+            font-size: 22px;
+        }
+
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+            color: #e0e0e0;
+            font-size: 16px;
+        }
+
+
+        strong {
+            color: var(--verde-claro);
+            font-size: 1.1em;
+        }
+
+
+        .volver {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+
+        .volver a {
+            text-decoration: none;
+            background: var(--verde-claro);
+            color: #1a1a1a;
+            padding: 12px 35px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(217, 249, 157, 0.3);
+        }
+
+
+        .volver a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--verde-claro);
+        }
+
+
+        /* Estilo para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .bloque {
+                flex-direction: column;
+                text-align: center;
+            }
+            .bloque img {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="banner">
+        <h1>GUÍA DE RECICLAJE</h1>
+    </div>
+
+
+    <div class="contenido">
+
+
+        <div class="bloque">
+            <img src="https://img.freepik.com/vector-gratis/bombilla-luz-dibujada-mano-dibujo-ilustracion-vectorial_460848-14909.jpg?semt=ais_hybrid&w=740&q=80" alt="Idea">
+            <div class="texto-info">
+                <h3>¿Qué es RECICLAR?</h3>
+                <p>
+                    <strong>RECICLAR</strong> Reciclar es el proceso de recolección, tratamiento y transformación de ciertos materiales que ya fueron utilizados para volver a ser empleados como materia prima en la fabricación de nuevos productos.El reciclaje reinserta en la cadena productiva los materiales de descarte de numerosas actividades industriales, empresariales o del consumo cotidiano. Esto permite que sean reutilizados y que disminuya la necesidad de adquirir o elaborar nuevos materiales.No todos los materiales existentes son reciclables, pero muchos sí, como el cartón, el vidrio, el aluminio, el papel y los plásticos. Estos pueden ser sometidos a diversos procesos de reaprovechamiento y así recomenzar su ciclo de utilidad.
+
+
+                </p>
+            </div>
+        </div>
+
+
+        <div class="bloque">
+            <img src="https://www.modore.com.mx/blog/wp-content/uploads/2022/08/reutilizar-vs-reciclar-1.jpg" alt="Reutilizar">
+            <div class="texto-info">
+                <h3>El Arte de REUTILIZAR</h3>
+                <p>
+                    <strong>Reutilizar</strong> El reciclaje en el arte es más que una tendencia pasajera; es un reflejo de nuestra relación en evolución con el medio ambiente. Los artistas, inspirados por el deseo de reducir los residuos y hacer una declaración sobre la sostenibilidad, han recurrido al reciclaje como medio y mensaje. El arte, con su ilimitada capacidad de imaginación e innovación, siempre ha sido un reflejo de la experiencia humana. En los últimos años, ha surgido una tendencia notable en el mundo del arte, una tendencia tan poderosa como ambientalmente consciente: el reciclaje y la reutilización. Este artículo se embarca en un viaje fascinante hacia la intersección del reciclaje en el arte, explorando cómo los artistas están transformando materiales desechados en creaciones impresionantes, por qué el reciclaje es importante en el mundo del arte y cómo se puede adoptar este movimiento creativo.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="bloque">
+            <div class="texto-info">
+                <h3>¿Cómo empezar hoy mismo?</h3>
+                <p>
+                    Comienza por separar tus residuos en casa: <strong>Orgánicos, Plásticos, Papel y Vidrio</strong>. Asegúrate de que los envases estén limpios y secos antes de depositarlos. Pequeñas acciones constantes generan cambios mundiales.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="volver">
+            <a href="{{ url_for('inicio') }}"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

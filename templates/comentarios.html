@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - GreenPlace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        :root {
+            --verde-oscuro: #556b2f;
+            --verde-claro: #d9f99d;
+            --blanco-cristal: rgba(255, 255, 255, 0.1);
+            --rojo: #ff4757;
+        }
+
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #1a1a1a;
+            margin: 0;
+            padding: 20px;
+            color: white;
+            /* Fondo consistente con el inicio y el juego */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                              url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop");
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+
+        .contenedor {
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+
+        h2 {
+            color: var(--verde-claro);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+
+        /* DISEÑO DEL FORMULARIO */
+        form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--verde-claro);
+        }
+
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            font-family: inherit;
+            color: white;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+
+        input[type="text"]:focus, textarea:focus {
+            border-color: var(--verde-claro);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(217, 249, 157, 0.2);
+        }
+
+
+        .btn-publicar {
+            background: var(--verde-claro);
+            color: #1a1a1a;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50px;
+            width: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+
+        .btn-publicar:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px var(--verde-claro);
+            filter: brightness(1.1);
+        }
+
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 40px 0;
+        }
+
+
+        /* LISTA DE COMENTARIOS */
+        .comentario {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+
+        .comentario:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateX(10px);
+            border-color: var(--verde-claro);
+        }
+
+
+        .comentario-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+
+        .usuario-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+
+        .nombre {
+            color: var(--verde-claro);
+            font-weight: 700;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--verde-oscuro);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--verde-claro);
+            border: 1px solid var(--verde-claro);
+        }
+
+
+        .mensaje {
+            margin: 0;
+            line-height: 1.6;
+            color: #e0e0e0;
+            padding-left: 55px;
+        }
+
+
+        /* BOTÓN BORRAR */
+        .btn-borrar {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            padding: 5px;
+        }
+
+
+        .btn-borrar:hover {
+            color: var(--rojo);
+            transform: scale(1.2);
+        }
+
+
+        /* BOTÓN VOLVER */
+        .btn-regresar {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 10px 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border-radius: 50px;
+            border: 1px solid var(--verde-claro);
+        }
+
+
+        .btn-regresar:hover {
+            background: var(--verde-claro);
+            color: #1a1a1a;
+            box-shadow: 0 0 15px var(--verde-claro);
+        }
+
+
+        .centro { text-align: center; }
+        .form-eliminar { margin: 0; padding: 0; background: none; border: none; }
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="contenedor">
+    <div class="centro">
+        <a href="{{ url_for('inicio') }}" class="btn-regresar">
+            <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
+    </div>
+
+
+    <h2><i class="fas fa-users"></i> Comunidad Verde</h2>
+
+
+    <form method="POST" action="{{ url_for('comentarios') }}">
+        <input type="text" name="nombre" placeholder="Tu nombre..." required>
+        <textarea name="mensaje" rows="4" placeholder="Comparte tus ideas ecológicas o tips de reciclaje..." required></textarea>
+        <button type="submit" class="btn-publicar">
+            <i class="fas fa-paper-plane"></i> Publicar en el muro
+        </button>
+    </form>
+
+
+    <hr>
+
+
+    <div id="lista-comentarios">
+        {% for c in comentarios %}
+            <div class="comentario">
+                <div class="comentario-header">
+                    <div class="usuario-info">
+                        <div class="avatar"><i class="fas fa-leaf"></i></div>
+                        <p class="nombre">{{ c.nombre }}</p>
+                    </div>
+                   
+                    <form action="{{ url_for('borrar_comentario', id=c.id) }}" method="POST" class="form-eliminar">
+                        <button type="submit" class="btn-borrar" title="Eliminar comentario" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?')">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </form>
+                </div>
+                <p class="mensaje">{{ c.mensaje }}</p>
+            </div>
+        {% else %}
+            <p class="centro" style="color: #888; font-style: italic;">Aún no hay mensajes. ¡Sé el primero en inspirar a la comunidad!</p>
+        {% endfor %}
+    </div>
+</div>
+
+
+</body>
+</html>
